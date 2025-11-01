@@ -1,7 +1,5 @@
 package com.subverso.sublab.core.domain.item.entity;
 
-import java.math.BigDecimal;
-
 import com.subverso.sublab.core.domain.item.entity.details.ItemDetails;
 import com.subverso.sublab.core.domain.item.enums.Gender;
 import com.subverso.sublab.core.domain.item.enums.ProductCategory;

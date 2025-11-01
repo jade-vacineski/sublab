@@ -1,5 +1,8 @@
 package com.subverso.sublab.core.domain.item.enums;
 
-public class ProductCategory {
-    
+public enum ProductCategory {
+    CLOTHING,
+    FOOTWEAR,
+    ACCESSORY,
+    BAGS
 }
