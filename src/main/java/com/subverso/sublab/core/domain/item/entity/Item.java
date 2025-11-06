@@ -1,10 +1,12 @@
 package com.subverso.sublab.core.domain.item.entity;
 
+import java.math.BigDecimal;
+
 import com.subverso.sublab.core.domain.item.entity.details.ItemDetails;
+import com.subverso.sublab.core.domain.item.enums.Condition;
 import com.subverso.sublab.core.domain.item.enums.Gender;
 import com.subverso.sublab.core.domain.item.enums.ProductCategory;
 
-import ch.qos.logback.core.joran.conditional.Condition;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -39,5 +41,8 @@ public class Item {
 
     @OneToOne(mappedBy = "item", cascade = CascadeType.ALL)
     private ItemDetails details;
+
+    private BigDecimal basePrice;
+    private BigDecimal suggestedPrice;
 }
 
