@@ -6,3 +6,5 @@ public enum ProductCategory {
     ACCESSORY,
     BAGS
 }
+
+

@@ -2,7 +2,21 @@ package com.subverso.sublab.core.domain.item.entity.details;
 
 import com.subverso.sublab.core.domain.item.entity.Item;
 
-public interface ItemDetails {
-    void setItem(Item item);
-    Item getItem();
+import jakarta.persistence.*;
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "item_details")
+public abstract class ItemDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "item_id")
+    private Item item;
+
+    public void setItem(Item item) { this.item = item; }
+    public Item getItem() { return item; }
 }
+

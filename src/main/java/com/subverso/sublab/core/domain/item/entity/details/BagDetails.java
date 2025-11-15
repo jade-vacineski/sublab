@@ -1,7 +1,7 @@
 package com.subverso.sublab.core.domain.item.entity.details;
 
 import com.subverso.sublab.core.domain.item.entity.Item;
-import org.hibernate.type.BagType;
+import com.subverso.sublab.core.domain.item.enums.BagType;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -21,7 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class BagDetails implements ItemDetails{
+public class BagDetails extends ItemDetails{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
