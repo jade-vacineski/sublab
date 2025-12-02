@@ -40,8 +40,7 @@ public class Item {
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "details_id")
+    @OneToOne(mappedBy = "item", cascade = CascadeType.ALL)
     private ItemDetails details;
 
     private BigDecimal basePrice;
