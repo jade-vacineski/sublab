@@ -12,11 +12,15 @@ public abstract class ItemDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "item_id")
     private Item item;
 
-    public void setItem(Item item) { this.item = item; }
-    public Item getItem() { return item; }
-}
+    public void setItem(Item item) {
+        this.item = item;
+    }
 
+    public Item getItem() {
+        return item;
+    }
+}
